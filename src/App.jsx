@@ -1,9 +1,13 @@
-import Message from "./components/Message";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
     <>
-      <Message />
+      <Navbar />
+      <Sidebar />
+      <Footer />
     </>
   );
 };
