@@ -1,13 +1,21 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import data from "./data/data.json";
 
 const App = () => {
+  const { results } = data;
+  const apartements = results.map((apartement) => {
+    return (
+      <>
+        <p>{apartement.name}</p>
+        <p>Price: {apartement.price}</p>
+        {apartement.cancellation_policy === "flexible" && <p>flexible</p>}
+      </>
+    );
+  });
+
   return (
     <>
-      <Navbar />
-      <Sidebar />
-      <Footer />
+      <h1>Appartements List.</h1>
+      <ul>{apartements}</ul>
     </>
   );
 };
