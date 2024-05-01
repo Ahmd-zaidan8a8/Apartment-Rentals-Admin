@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "./data/data.json";
+import List from "./components/List";
 
 const App = () => {
   const { results } = data;
@@ -9,27 +10,11 @@ const App = () => {
     const filtered = apartements.filter((apartement) => apartement.id !== id);
     setApartements(filtered);
   };
-  const apartementList = apartements.map((apartement) => {
-    return (
-      <div key={apartement.id}>
-        <p>{apartement.name}</p>
-        <p>Price: {apartement.price}</p>
-        {apartement.cancellation_policy === "flexible" && <p>flexible</p>}
-        <button
-          onClick={() => {
-            handleDelete(apartement.id);
-          }}
-        >
-          Delete
-        </button>
-      </div>
-    );
-  });
 
   return (
     <>
       <h1>Appartements List.</h1>
-      <ul>{apartementList}</ul>
+      <List apartements={apartements} onDelete={handleDelete} />
     </>
   );
 };
