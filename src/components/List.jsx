@@ -1,7 +1,4 @@
-
-
-
-const List = ({apartements , onDelete}) => {
+const List = ({ apartements, onDelete }) => {
   const apartementList = apartements.map((apartement) => {
     return (
       <div key={apartement.id}>
@@ -18,6 +15,7 @@ const List = ({apartements , onDelete}) => {
       </div>
     );
   });
+    return <div>{apartementList}</div>
 };
 
 export default List;
