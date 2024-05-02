@@ -1,6 +1,8 @@
 import { useState } from "react";
 import data from "./data/data.json";
 import List from "./components/List";
+import Dashboard from "./components/Dashboard";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   const { results } = data;
@@ -15,7 +17,11 @@ const App = () => {
 
   return (
     <>
+      {/* <Routes> */}
+        {/* <Route path="/dashboard" element={<Dashboard />} */}
+        {/* <Route path="/notfound" element={<NotFound />} /> */}
       <List apartementList={apartementList} onDelete={handleDelete} />
+      {/* </Routes> */}
     </>
   );
 };
