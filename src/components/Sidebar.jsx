@@ -1,5 +1,9 @@
 const Sidebar = () => {
-  return <div> links to the Home and About page.</div>;
+  return (
+    <div>
+      <p>The sidebar needs to be here</p>
+    </div>
+  );
 };
 
 export default Sidebar;

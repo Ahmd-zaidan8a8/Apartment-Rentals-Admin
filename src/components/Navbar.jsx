@@ -1,7 +1,9 @@
 const Navbar = () => {
   return (
     <>
-      <nav>Navbar</nav>
+      <nav>
+        <p>We need to import the Navbar here</p>
+      </nav>
     </>
   );
 };
