@@ -1,21 +1,17 @@
-const List = ({ apartements, onDelete }) => {
-  const apartementList = apartements.map((apartement) => {
+import ListItem from "./ListItem";
+
+const List = ({ apartementList, onDelete }) => {
+  const list = apartementList.map((apartement) => {
     return (
-      <div key={apartement.id}>
-        <p>{apartement.name}</p>
-        <p>Price: {apartement.price}</p>
-        {apartement.cancellation_policy === "flexible" && <p>flexible</p>}
-        <button
-          onClick={() => {
-            onDelete(apartement.id);
-          }}
-        >
-          Delete
-        </button>
-      </div>
+      <ListItem key={apartement.id} item={apartement} onDelete={onDelete} />
     );
   });
-    return <div>{apartementList}</div>
+  return (
+    <div>
+      <h1>Appartements List.</h1>
+      {list}
+    </div>
+  );
 };
 
 export default List;

@@ -4,17 +4,18 @@ import List from "./components/List";
 
 const App = () => {
   const { results } = data;
-  const [apartements, setApartements] = useState(results);
+  
+  // results Arr of objects
+  const [apartementList, setApartementList] = useState(results);
 
   const handleDelete = (id) => {
-    const filtered = apartements.filter((apartement) => apartement.id !== id);
-    setApartements(filtered);
+    const filtered = apartementList.filter((apartement) => apartement.id !== id);
+    setApartementList(filtered);
   };
 
   return (
     <>
-      <h1>Appartements List.</h1>
-      <List apartements={apartements} onDelete={handleDelete} />
+      <List apartementList={apartementList} onDelete={handleDelete} />
     </>
   );
 };
