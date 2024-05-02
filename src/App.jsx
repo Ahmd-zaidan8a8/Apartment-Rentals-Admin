@@ -3,6 +3,8 @@ import data from "./data/data.json";
 import List from "./components/List";
 import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
+import ItemDetails from "./components/ItemDetails";
+import About from "./components/About";
 
 const App = () => {
   const { results } = data;
