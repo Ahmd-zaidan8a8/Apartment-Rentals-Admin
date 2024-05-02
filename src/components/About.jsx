@@ -2,8 +2,10 @@
 function About(){
     return(
         <div className="About">
-        <h1>our list items and list will be here</h1>
-        <p>A page showing the project description and information about the team members (students) working on the project, including links to your GitHub and LinkedIn profiles.</p>
+        <h1>About the authors</h1>
+        <p>This page was created by 
+            <a href="https://github.com/Ahmd-zaidan8a8">Ahmad Zaidan</a> and 
+            <a href="https://github.com/magdakorgul">Magdalena Korgul</a> during Ironhack bootcamp.</p>
         </div>
     )
 }

@@ -5,6 +5,8 @@ import Dashboard from "./components/Dashboard";
 import NotFound from "./components/NotFound";
 import ItemDetails from "./components/ItemDetails";
 import About from "./components/About";
+import { Routes, Route } from "react-router-dom";
+
 
 const App = () => {
   const { results } = data;
@@ -19,11 +21,13 @@ const App = () => {
 
   return (
     <>
-      {/* <Routes> */}
-        {/* <Route path="/dashboard" element={<Dashboard />} */}
-        {/* <Route path="/notfound" element={<NotFound />} /> */}
+      {/* <Routes> 
+         <Route path="/components/dashboard" element={<Dashboard />} />
+         <Route path="/components/notfound" element={<NotFound />} />  */}
+         {/* <Route path="/components/itemdetails" element={<ItemDetails />} /> */}
+         {/* <Route path="/components/about" element={<About />} /> */}
       <List apartementList={apartementList} onDelete={handleDelete} />
-      {/* </Routes> */}
+       {/* </Routes> */}
     </>
   );
 };
