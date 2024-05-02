@@ -21,6 +21,16 @@ const App = () => {
 
   return (
     <>
+    <nav>
+      <p>We need to import the Navbar here</p>
+    </nav>
+    <div>
+      <p>The sidebar needs to be here</p>
+    </div>
+    <footer>
+      <p>The footer needs to be displayed here</p>
+    </footer>
+
       {/* <Routes> 
          <Route path="/components/dashboard" element={<Dashboard />} />
          <Route path="/components/notfound" element={<NotFound />} />  */}
