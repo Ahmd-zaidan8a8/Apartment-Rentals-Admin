@@ -11,11 +11,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Link to="/">HomePage</Link>
-      <Link to="/items/:itemDetail">Details</Link>
-      <Link to="/about">About</Link>
 
-      <Sidebar />
+      {/* <Link to="/">HomePage</Link>
+      <Link to="/items/:itemDetail">Details</Link>
+      <Link to="/about">About</Link> */}
+
+      {/* <Sidebar /> */}
 
 
       <Routes>
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
