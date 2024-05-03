@@ -1,4 +1,4 @@
-import logo from "../images/logo.png";
+import { FaBuildingColumns } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -9,8 +9,10 @@ const Navbar = () => {
       >
         <div className="container">
           <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" width="50" height="50" />
-            <span>LogoName</span>
+            <FaBuildingColumns size={40} />
+            <span style={{ display: "inline-block", padding: "1rem" }}>
+              LogoName
+            </span>
           </a>
         </div>
       </nav>
