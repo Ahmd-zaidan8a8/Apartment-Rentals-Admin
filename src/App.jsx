@@ -12,12 +12,11 @@ const App = () => {
     <>
       <Navbar />
       <Link to="/">HomePage</Link>
-      <Link to="./items/:itemDetail">Details</Link>
+      <Link to="/items/:itemDetail">Details</Link>
       <Link to="/about">About</Link>
 
       <Sidebar />
 
-      <Footer />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -25,6 +24,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+
+      <Footer />
     </>
   );
 };

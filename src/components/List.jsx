@@ -6,9 +6,10 @@ const List = ({ apartementList, onDelete }) => {
       <ListItem key={apartement.id} item={apartement} onDelete={onDelete} />
     );
   });
+
   return (
-    <div>
-      <h1>Appartements List.</h1>
+    <div className="list-group text-center">
+      <h1>Appartements List</h1>
       {list}
     </div>
   );
