@@ -8,8 +8,8 @@ const List = ({ apartementList, onDelete }) => {
   });
 
   return (
-    <div className="list-group text-center">
-      <h1>Appartements List</h1>
+    <div className="list-group text-left p-2 m-1">
+      <p className="text-left">Manage your venues in one place</p>
       {list.length === 0 && <p>No items found.</p>}
       {list}
     </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
         className="navbar bg-dark border-bottom border-body"
         data-bs-theme="dark"
       >
-        <div className="container">
+        <div className="container m-2">
           <a className="navbar-brand" href="#">
             <FaBuildingColumns size={40} />
             <span style={{ display: "inline-block", padding: "1rem" }}>

@@ -16,8 +16,8 @@ const HomePage = () => {
   };
 
   return (
-    <div className="HomePage">
-      <h1>This is our HomePage</h1>
+    <div className="HomePage m-1">
+      <h1 className="m-2 mt-4">Your appartments' list</h1>
       <List apartementList={apartementList} onDelete={handleDelete} />
     </div>
   );
