@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
+ 
 
 const App = () => {
   return (

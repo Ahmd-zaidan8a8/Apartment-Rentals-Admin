@@ -1,6 +1,31 @@
 import { Link } from "react-router-dom";
+import AddItemForm from "./AddItemForm";
+import { useState } from "react";
 
-const ListItem = ({ item, onDelete }) => {
+const ListItem = ({ item, onDelete, onAddItem }) => {
+  const [newItem, setNewItem] = useState({
+    name: "",
+    city: "",
+    country: "",
+
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewItem({
+      ...newItem,
+      [name]: value,
+    });
+  };
+
+  const handleAddItem = () => {
+    onAddItem(newItem);
+    setNewItem({
+      name: "",
+      city: "",
+      country: "",
+    });
+  };
+
   return (
     
     <div className="card mb-2">
@@ -34,6 +59,11 @@ const ListItem = ({ item, onDelete }) => {
       >
         Delete
       </button>
+      <AddItemForm
+          handleChange={handleChange}
+          handleSubmit={handleAddItem}
+          newItem={newItem}
+        />
       </div>
     </div>
   
