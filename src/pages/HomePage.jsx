@@ -14,6 +14,7 @@ const HomePage = () => {
     city: "",
     country: ""
   });
+  const [formDisplayed, setFormDisplayed] = useState(false);
 
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
@@ -39,11 +40,14 @@ const HomePage = () => {
       city: "",
       country: ""
     });
+    setFormDisplayed(false);
   };
+
+  
 
   return (
     <div className="HomePage m-1">
-      <h1 className="m-2 mt-4">Your appartments' list</h1>
+      <h1 className="m-2 mt-4">Your apartments' list</h1>
       
       <List apartementList={apartementList} onDelete={handleDelete} />
       {apartementList.length > 0 && (

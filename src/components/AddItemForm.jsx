@@ -2,33 +2,48 @@ import { useState } from "react";
 
 const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
     return (
-      <form onSubmit={handleSubmit}>
+        <div className="border p-4 mb-4">
+            <h4 className="m-1 p-2">Add a new apartment</h4>
+      <form onSubmit={handleSubmit} className="mb-4 p-4 border">
+        <div className="mb-3">
+        <label htmlFor="name" className="form-label">Apartment Name</label>
         <input
-          type="text"
+        className="form-control"
+        type="text"
           name="name"
           value={newItem.name}
           onChange={handleChange}
-          placeholder="Apartment name"
+          placeholder="Enter an apartment name"
           required
         />
+        </div>
+        <div className="mb-3">
+        <label htmlFor="city" className="form-label">City</label>
         <input
+        className="form-control"
           type="text"
           name="city"
           value={newItem.city}
           onChange={handleChange}
-          placeholder="City"
+          placeholder="Enter city"
           required
-        />
+        /></div>
+        <div className="mb-3">
+        <label htmlFor="country" className="form-label">Country</label>
+        <br />
         <input
+        className="form-control"
           type="text"
           name="country"
           value={newItem.country}
           onChange={handleChange}
-          placeholder="Country"
+          placeholder="Enter country"
           required
         />
-        <button type="submit">Add Item</button>
+        </div>
+        <button type="submit" className="btn btn-primary">Add Item</button>
       </form>
+      </div>
     );
   };
   
