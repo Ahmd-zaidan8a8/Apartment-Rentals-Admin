@@ -1,33 +1,7 @@
 import { Link } from "react-router-dom";
-import AddItemForm from "./AddItemForm";
-import { useState } from "react";
 
-const ListItem = ({ item, onDelete, onAddItem }) => {
-  const [newItem, setNewItem] = useState({
-    name: "",
-    city: "",
-    country: "",
-
-  });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewItem({
-      ...newItem,
-      [name]: value,
-    });
-  };
-
-  const handleAddItem = () => {
-    onAddItem(newItem);
-    setNewItem({
-      name: "",
-      city: "",
-      country: "",
-    });
-  };
-
+const ListItem = ({ item, onDelete }) => {
   return (
-    
     <div className="card mb-2">
       <Link
         to="/items/:itemDetail"
@@ -38,19 +12,19 @@ const ListItem = ({ item, onDelete, onAddItem }) => {
           <h5 className="mb-1">{item.name}</h5>
           <small>3 days ago</small>
         </div>
-        <p className="mb-1">{`Location:
+        <p className="mb-1">
+          {`Location:
           ${item.city}, ${item.country}`}
         </p>
         <p className="mb-1">Price: {item.price}$</p>
         <p className="mb-1">Raiting: {item["review_scores_rating"]}</p>
         <small>
-          {item.cancellation_policy === "flexible" && <p>Cancellation: FLEXIBLE</p>}
+          {item.cancellation_policy === "flexible" && (
+            <p>Cancellation: FLEXIBLE</p>
+          )}
         </small>
       </Link>
-      <div>
-      <button className="btn btn-secondary
-      col-3 inline-block me-2"
-      >See details</button>
+
       <button
         className="btn btn-danger col-3 inline-block"
         onClick={() => {
@@ -59,14 +33,7 @@ const ListItem = ({ item, onDelete, onAddItem }) => {
       >
         Delete
       </button>
-      <AddItemForm
-          handleChange={handleChange}
-          handleSubmit={handleAddItem}
-          newItem={newItem}
-        />
-      </div>
     </div>
-  
   );
 };
 

@@ -6,9 +6,46 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer";
- 
+import Dashboard from "./pages/Dashboard";
+import data from "./data/data.json";
+import { useState } from "react";
 
 const App = () => {
+  const { results } = data;
+
+  // results Arr of objects
+  const [apartementList, setApartementList] = useState(results);
+  const [newItem, setNewItem] = useState({
+    name: "",
+    city: "",
+    country: "",
+  });
+  const handleDelete = (id) => {
+    const filtered = apartementList.filter(
+      (apartement) => apartement.id !== id
+    );
+    setApartementList(filtered);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewItem({
+      ...newItem,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const updatedList = [...apartementList, newItem];
+    setApartementList(updatedList);
+    setNewItem({
+      name: "",
+      city: "",
+      country: "",
+    });
+  };
+
   return (
     <>
       <Navbar />
@@ -19,11 +56,28 @@ const App = () => {
 
       {/* <Sidebar /> */}
 
-
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={
+            <HomePage
+              apartementList={apartementList}
+              handleDelete={handleDelete}
+            />
+          }
+        />
         <Route path="/items/:itemDetail" element={<ItemDetails />} />
         <Route path="/about" element={<About />} />
+        <Route
+          path="/dashboard"
+          element={
+            <Dashboard
+              newItem={newItem}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+            />
+          }
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
