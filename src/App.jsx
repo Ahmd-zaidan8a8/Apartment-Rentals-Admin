@@ -66,7 +66,7 @@ const App = () => {
             />
           }
         />
-        <Route path="/items/:itemDetail" element={<ItemDetails />} />
+        <Route path="/items/:itemDetail" element={<ItemDetails apartementList={apartementList}  />} />
         <Route path="/about" element={<About />} />
         <Route
           path="/dashboard"

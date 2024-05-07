@@ -4,7 +4,7 @@ const ListItem = ({ item, onDelete }) => {
   return (
     <div className="card mb-2">
       <Link
-        to="/items/:itemDetail"
+        to={`/items/${item.id}`}
         className="list-group-item list-group-item-action"
         aria-current="true"
       >
