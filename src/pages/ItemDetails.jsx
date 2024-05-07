@@ -37,11 +37,7 @@ function ItemDetails({ apartementList }) {
           <li>description: {apartement.description}</li>
         </ul>
       )}
-      <div className="text-center">
-        <Link to="/" className="link-underline-light">
-          Back to Homepage
-        </Link>
-        </div>
+      
     </div>
   );
 }

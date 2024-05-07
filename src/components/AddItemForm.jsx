@@ -63,21 +63,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
             required
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="review_scores_rating" className="form-label">
-            Rating
-          </label>
-          <br />
-          <input
-            className="form-control"
-            type="number"
-            name="rating"
-            value={newItem["review_scores_rating"]}
-            onChange={handleChange}
-            placeholder="Enter the rating"
-            required
-          />
-        </div>
+        
         <button type="submit" className="btn btn-primary">
           Add Item
         </button>
