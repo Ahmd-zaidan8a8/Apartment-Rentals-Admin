@@ -63,6 +63,21 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
             required
           />
         </div>
+        <div className="mb-3">
+          <label htmlFor="rating" className="form-label">
+            Price
+          </label>
+          <br />
+          <input
+            className="form-control"
+            type="number"
+            name="rating"
+            value={newItem.price}
+            onChange={handleChange}
+            placeholder="Enter the rating"
+            required
+          />
+        </div>
         
         <button type="submit" className="btn btn-primary">
           Add Item
