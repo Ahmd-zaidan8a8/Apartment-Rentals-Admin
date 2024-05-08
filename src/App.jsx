@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./pages/Dashboard";
 import data from "./data/data.json";
 import { useState } from "react";
+import EditItemForm from "./components/EditItemForm";
 
 const App = () => {
   const { results } = data;
@@ -85,6 +86,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/edit/:itemId" element={<EditItemForm />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 

@@ -37,7 +37,7 @@ function ItemDetails({ apartementList }) {
           <li>description: {apartement.description}</li>
         </ul>
       )}
-      <div className="text-center">
+      <div className="text-center p-3">
         <Link to="/" className="link-underline-light">
           Back to Homepage
         </Link>
