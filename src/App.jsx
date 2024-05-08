@@ -59,14 +59,16 @@ const App = () => {
     const newApartment = data;
 
     const newList = apartementList.map((apartement) => {
-      return apartementId === apartement.id ? newApartment : apartement;
+      return apartementId === apartement.id ? {...newApartment , id:apartementId} : apartement;
     });
 
     // const copy = structuredClone(apartementList);
-    // copy[xxx] = newApartment
+    // copy[apartementId] = newApartment;
+
+    console.log(newList)
+
 
     setApartementList(newList);
-    console.log(apartementList);
   };
 
   return (

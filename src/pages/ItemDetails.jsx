@@ -7,9 +7,9 @@ function ItemDetails({ apartementList }) {
   const { itemId } = useParams();
 
   useEffect(() => {
-    setApartement(
-      apartementList.find((apartement) => apartement.id === itemId)
-    );
+    const apart = apartementList.find((apartement) => apartement.id === itemId);
+
+    setApartement(apart);
   }, []);
 
   return (
@@ -17,7 +17,6 @@ function ItemDetails({ apartementList }) {
       <div className="row border">
         <div className="col-8">
           <h1 className="fs-2">Apartement Details</h1>
-          {/* TODO: here undefined condition */}
           {apartement !== undefined && (
             <ul className="list-unstyled">
               <li className="lh-lg pt-3 pb-3 fs-5">
