@@ -7,7 +7,6 @@ const HomePage = ({ apartementList, handleDelete }) => {
       {apartementList.length > 0 && (
         <List apartementList={apartementList} onDelete={handleDelete} />
       )}
-      ;
     </div>
   );
 };

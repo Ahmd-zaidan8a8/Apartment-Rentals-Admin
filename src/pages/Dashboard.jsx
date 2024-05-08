@@ -10,7 +10,7 @@ const Dashboard = ({ newItem, handleChange, handleSubmit }) => {
         newItem={newItem}
       />
       <div className="text-center p-4">
-        <Link to="/" className="link-underline-light">
+        <Link to="/" className="btn btn-outline-secondary">
           Back to Homepage
         </Link>
       </div>
