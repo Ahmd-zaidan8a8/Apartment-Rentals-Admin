@@ -19,6 +19,8 @@ const App = () => {
     name: "",
     city: "",
     country: "",
+    price: "",
+    "review_scores_rating" : "",
   });
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
@@ -43,6 +45,8 @@ const App = () => {
       name: "",
       city: "",
       country: "",
+      price: "",
+      "review_scores_rating" : "",
     });
   };
 
@@ -66,7 +70,10 @@ const App = () => {
             />
           }
         />
-        <Route path="/items/:itemDetail" element={<ItemDetails apartementList={apartementList}  />} />
+        <Route
+          path="/items/:itemDetail"
+          element={<ItemDetails apartementList={apartementList} />}
+        />
         <Route path="/about" element={<About />} />
         <Route
           path="/dashboard"

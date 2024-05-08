@@ -8,7 +8,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
     if (ref.current) ref.current.focus();
   }, []);
   return (
-    <div className="border p-4 mb-4">
+    <div className="border p-4 pb-0">
       <h4 className="m-1 p-2">Add a new apartment</h4>
       <form onSubmit={handleSubmit} className="mb-4 p-4 border">
         <div className="mb-3">
@@ -72,20 +72,19 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
         </div>
         <div className="mb-3">
           <label htmlFor="rating" className="form-label">
-            Price
+            Rating
           </label>
           <br />
           <input
             className="form-control"
             type="number"
-            name="rating"
-            value={newItem.price}
+            name="review_scores_rating"
+            value={newItem["review_scores_rating"]}
             onChange={handleChange}
             placeholder="Enter the rating"
             required
           />
         </div>
-        
         <button type="submit" className="btn btn-primary">
           Add Item
         </button>
