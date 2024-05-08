@@ -22,21 +22,21 @@ function ItemDetails({ apartementList }) {
       {apartement !== null && (
         <ul className="list-unstyled">
           <li class="lh-lg pt-3 pb-3 fs-5"><b>{apartement.name}</b></li>
-          <li>
+          <li class="lh-lg">
             {" "}
-            <b>Location: </b>{apartement.city} , {apartement.country}
+            <b>Location: </b>{apartement.city}, {apartement.country}
           </li>
           <li class="lh-lg"><b>Accommodates:</b> {apartement.accommodates}</li>
-          <li><b>Price:</b> {apartement.price}€</li>
-          <li><b>Cleaning fee:</b> {apartement["cleaning_fee"]}€</li>
-          <li>
+          <li class="lh-lg"><b>Price:</b> {apartement.price}€</li>
+          <li class="lh-lg"><b>Cleaning fee:</b> {apartement["cleaning_fee"]}€</li>
+          <li class="lh-lg">
             <b>Review scores rating:</b> {apartement["review_scores_rating"]} / 100
           </li>
-          <li><b>Bathrooms:</b> {apartement.bathrooms}</li>
-          <li><b>Bedrooms:</b> {apartement.bedrooms}</li>
-          <li><b>Beds:</b> {apartement.beds}</li>
-          <li><b>Host response time:</b> {apartement["host_response_time"]}</li>
-          <li><b>Description:</b> {apartement.description}</li>
+          <li class="lh-lg"><b>Bathrooms:</b> {apartement.bathrooms}</li>
+          <li class="lh-lg"><b>Bedrooms:</b> {apartement.bedrooms}</li>
+          <li class="lh-lg"><b>Beds:</b> {apartement.beds}</li>
+          <li class="lh-lg"><b>Host response time:</b> {apartement["host_response_time"]}</li>
+          <li class="lh-lg"><b>Description:</b> {apartement.description}</li>
         </ul>
       )}
       </div>
