@@ -1,7 +1,7 @@
 import ErrorPage from "./pages/ErrorPage";
 import ItemDetails from "./pages/ItemDetails";
 import About from "./pages/About";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./pages/HomePage";
@@ -22,6 +22,9 @@ const App = () => {
     price: "",
     review_scores_rating: "",
   });
+
+  const navigate = useNavigate();
+
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
       (apartement) => apartement.id !== id
@@ -37,10 +40,12 @@ const App = () => {
     });
   };
 
+  // TODO: Feedback
   const handleSubmit = (e) => {
     e.preventDefault();
-    const updatedList = [...apartementList, newItem];
+    const updatedList = [...apartementList, newItem].reverse();
     setApartementList(updatedList);
+    navigate('/');
     setNewItem({
       name: "",
       city: "",

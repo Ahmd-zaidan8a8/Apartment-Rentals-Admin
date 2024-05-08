@@ -1,13 +1,18 @@
 import { useForm } from "react-hook-form";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const EditItemForm = ({ handleEditSubmit }) => {
   const { register, handleSubmit } = useForm();
+  // TODO:
+  const navigate = useNavigate();
+  // console.log(navigate)
 
   const { itemId } = useParams();
 
   const onSubmit = (data) => {
     handleEditSubmit(data, itemId);
+    navigate(`/items/${itemId}`);
+    
   };
 
   return (
@@ -24,7 +29,7 @@ const EditItemForm = ({ handleEditSubmit }) => {
             className="form-control"
           />
         </div>
-        <div className="mb-3">
+        {/* <div className="mb-3">
           <label htmlFor="location" className="form-label">
             Location
           </label>
@@ -133,7 +138,7 @@ const EditItemForm = ({ handleEditSubmit }) => {
             type="text"
             className="form-control"
           />
-        </div>
+        </div> */}
         <button type="submit" className="btn btn-primary">
           Edit Apartment
         </button>

@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ExpandableText from "../components/ExpandableText";
 
 function ItemDetails({ apartementList }) {
-  const [apartement, setApartement] = useState(null);
+  const [apartement, setApartement] = useState({});
   const { itemId } = useParams();
-
-  // TODO:remove the effect hook
 
   useEffect(() => {
     setApartement(
-      apartementList.filter((apartement) => apartement.id === itemId)[0]
+      apartementList.find((apartement) => apartement.id === itemId)
     );
   }, []);
 
@@ -18,7 +17,8 @@ function ItemDetails({ apartementList }) {
       <div className="row border">
         <div className="col-8">
           <h1 className="fs-2">Apartement Details</h1>
-          {apartement !== null && (
+          {/* TODO: here undefined condition */}
+          {apartement !== undefined && (
             <ul className="list-unstyled">
               <li className="lh-lg pt-3 pb-3 fs-5">
                 <b>{apartement.name}</b>
@@ -54,7 +54,8 @@ function ItemDetails({ apartementList }) {
                 <b>Host response time:</b> {apartement["host_response_time"]}
               </li>
               <li className="lh-lg">
-                <b>Description:</b> {apartement.description}
+                <b>Description:</b>
+                <ExpandableText>{apartement.description}</ExpandableText>
               </li>
             </ul>
           )}

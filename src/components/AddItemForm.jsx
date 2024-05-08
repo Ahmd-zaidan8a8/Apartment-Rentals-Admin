@@ -7,6 +7,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
   useEffect(() => {
     if (ref.current) ref.current.focus();
   }, []);
+  
   return (
     <div className="border p-4 pb-0">
       <h4 className="m-1 p-2">Add a new apartment</h4>
