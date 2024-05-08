@@ -18,15 +18,15 @@ function ItemDetails({ apartementList }) {
     <div className="ItemDetails container m-2 pt-2">
       <div className="row border">
         <div className="col-8">
-      <h1>Apartement Details</h1>
+      <h1 className="fs-2">Apartement Details</h1>
       {apartement !== null && (
         <ul className="list-unstyled">
-          <li><b>{apartement.name}</b></li>
+          <li class="lh-lg pt-3 pb-3 fs-5"><b>{apartement.name}</b></li>
           <li>
             {" "}
             <b>Location: </b>{apartement.city} , {apartement.country}
           </li>
-          <li><b>Accommodates:</b> {apartement.accommodates}</li>
+          <li class="lh-lg"><b>Accommodates:</b> {apartement.accommodates}</li>
           <li><b>Price:</b> {apartement.price}€</li>
           <li><b>Cleaning fee:</b> {apartement["cleaning_fee"]}€</li>
           <li>
@@ -47,7 +47,7 @@ function ItemDetails({ apartementList }) {
       
     </div>
     <div className="text-center p-3">
-        <Link to="/" className="link-underline-light">
+        <Link to="/" className="btn btn-outline-secondary">
           Back to Homepage
         </Link>
 
