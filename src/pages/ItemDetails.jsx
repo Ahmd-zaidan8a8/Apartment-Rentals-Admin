@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function ItemDetails({ apartementList }) {
   console.log("item details called");
@@ -37,6 +37,12 @@ function ItemDetails({ apartementList }) {
           <li>description: {apartement.description}</li>
         </ul>
       )}
+      <div className="text-center">
+        <Link to="/" className="link-underline-light">
+          Back to Homepage
+        </Link>
+
+      </div>
     </div>
   );
 }
