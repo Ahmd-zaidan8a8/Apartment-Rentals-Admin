@@ -15,29 +15,38 @@ function ItemDetails({ apartementList }) {
   }, []);
 
   return (
-    <div className="ItemDetails">
+    <div className="ItemDetails container m-2 pt-2">
+      <div className="row border">
+        <div className="col-8">
       <h1>Apartement Details</h1>
       {apartement !== null && (
-        <ul>
-          <li>{apartement.name}</li>
+        <ul className="list-unstyled">
+          <li><b>{apartement.name}</b></li>
           <li>
             {" "}
-            Location :{apartement.city} , {apartement.country}
+            <b>Location: </b>{apartement.city} , {apartement.country}
           </li>
-          <li>accommodates: {apartement.accommodates}</li>
-          <li>price: {apartement.price}</li>
-          <li>cleaning fee: {apartement["cleaning_fee"]}</li>
+          <li><b>Accommodates:</b> {apartement.accommodates}</li>
+          <li><b>Price:</b> {apartement.price}€</li>
+          <li><b>Cleaning fee:</b> {apartement["cleaning_fee"]}€</li>
           <li>
-            review scores rating: {apartement["review_scores_rating"]} / 100
+            <b>Review scores rating:</b> {apartement["review_scores_rating"]} / 100
           </li>
-          <li>bathrooms: {apartement.bathrooms}</li>
-          <li>bedrooms: {apartement.bedrooms}</li>
-          <li>beds: {apartement.beds}</li>
-          <li>host response time: {apartement["host_response_time"]}</li>
-          <li>description: {apartement.description}</li>
+          <li><b>Bathrooms:</b> {apartement.bathrooms}</li>
+          <li><b>Bedrooms:</b> {apartement.bedrooms}</li>
+          <li><b>Beds:</b> {apartement.beds}</li>
+          <li><b>Host response time:</b> {apartement["host_response_time"]}</li>
+          <li><b>Description:</b> {apartement.description}</li>
         </ul>
       )}
-      <div className="text-center">
+      </div>
+      <div className="col-4">
+        <p>photo placeholder</p>
+        
+        </div>
+      
+    </div>
+    <div className="text-center p-3">
         <Link to="/" className="link-underline-light">
           Back to Homepage
         </Link>
