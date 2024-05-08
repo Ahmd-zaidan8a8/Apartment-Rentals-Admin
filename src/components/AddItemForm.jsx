@@ -1,6 +1,12 @@
-
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (ref.current) ref.current.focus();
+  }, []);
   return (
     <div className="border p-4 mb-4">
       <h4 className="m-1 p-2">Add a new apartment</h4>
@@ -10,6 +16,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
             Apartment Name
           </label>
           <input
+            ref={ref}
             className="form-control"
             type="text"
             name="name"
