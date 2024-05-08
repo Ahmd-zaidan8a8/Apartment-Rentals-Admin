@@ -87,8 +87,10 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
         </div>
       </form>
       <button type="submit" className="btn btn-primary">
-          Add Item
-        </button>
+        Add Item
+      </button>
+      
+      
     </div>
   );
 };

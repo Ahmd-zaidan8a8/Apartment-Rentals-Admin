@@ -14,14 +14,13 @@ import EditItemForm from "./components/EditItemForm";
 const App = () => {
   const { results } = data;
 
-  // results Arr of objects
   const [apartementList, setApartementList] = useState(results);
   const [newItem, setNewItem] = useState({
     name: "",
     city: "",
     country: "",
     price: "",
-    "review_scores_rating" : "",
+    review_scores_rating: "",
   });
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
@@ -47,17 +46,30 @@ const App = () => {
       city: "",
       country: "",
       price: "",
-      "review_scores_rating" : "",
+      review_scores_rating: "",
     });
+  };
+
+  const handleEditSubmit = (data, apartementId) => {
+    const newApartment = data;
+
+    const newList = apartementList.map((apartement) => {
+      return apartementId === apartement.id ? newApartment : apartement;
+    });
+
+    // const copy = structuredClone(apartementList);
+    // copy[xxx] = newApartment
+
+    setApartementList(newList);
+    console.log(apartementList);
   };
 
   return (
     <>
       <Navbar />
 
-      {/* <Link to="/">HomePage</Link>
-      <Link to="/items/:itemDetail">Details</Link>
-      <Link to="/about">About</Link> */}
+      {/* <Link to="/about">About</Link> */}
+      <Link to="/dashboard">Go to dashboard</Link>
 
       {/* <Sidebar /> */}
 
@@ -72,7 +84,7 @@ const App = () => {
           }
         />
         <Route
-          path="/items/:itemDetail"
+          path="/items/:itemId"
           element={<ItemDetails apartementList={apartementList} />}
         />
         <Route path="/about" element={<About />} />
@@ -86,11 +98,14 @@ const App = () => {
             />
           }
         />
-        <Route path="/edit/:itemId" element={<EditItemForm />} />
+        <Route
+          path="/edit/:itemId"
+          element={<EditItemForm handleEditSubmit={handleEditSubmit} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
 
-       <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

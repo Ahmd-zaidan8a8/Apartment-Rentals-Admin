@@ -24,15 +24,17 @@ const ListItem = ({ item, onDelete }) => {
           )}
         </small>
       </Link>
-
-      <button
-        className="btn btn-danger col-3 inline-block"
-        onClick={() => {
-          onDelete(item.id);
-        }}
-      >
-        Delete
-      </button>
+      <div className="d-flex justify-content-start">
+        <Link className="m-2" to={`/edit/${item.id}`} ><button className="btn btn-primary">Edit Item</button></Link>
+        <button
+          className="btn btn-danger"
+          onClick={() => {
+            onDelete(item.id);
+          }}
+        >
+          Delete
+        </button>
+      </div>
     </div>
   );
 };
