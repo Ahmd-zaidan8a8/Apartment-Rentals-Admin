@@ -1,5 +1,4 @@
 import ListItem from "./ListItem";
-import AddItemForm from "./AddItemForm";
 
 const List = ({ apartementList, onDelete }) => {
   let list = apartementList.map((apartement) => {
@@ -15,7 +14,7 @@ const List = ({ apartementList, onDelete }) => {
       {list}
     </div>
   );
-  <AddItemForm />
+  
 
 };
 

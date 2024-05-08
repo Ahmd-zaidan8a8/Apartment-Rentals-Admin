@@ -1,13 +1,11 @@
+import { DiVim } from "react-icons/di";
 
 
 
 const Footer = () => {
-  return <footer className="footer fixed-bottom bg-secondary p-2">
-  <div className="container text-left">
-<span className="text-muted">Footer content here
-
-</span>
-  </div>
+  return <footer className="footer fixed-bottom bg-secondary p-1">
+<div className="p-1">Project on GitHub (link to add)
+</div>
   
   
   </footer>

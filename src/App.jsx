@@ -58,9 +58,12 @@ const App = () => {
       {/* <Link to="/">HomePage</Link>
       <Link to="/items/:itemDetail">Details</Link>
       <Link to="/about">About</Link> */}
-
-      {/* <Sidebar /> */}
-
+      <div className="container-fluid">
+      <div className="row">
+          <div className="col-md-3">
+      <Sidebar />
+      </div>
+      <div className="col-md-9">
       <Routes>
         <Route
           path="/"
@@ -89,6 +92,9 @@ const App = () => {
         <Route path="/edit/:itemId" element={<EditItemForm />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+</div>
+</div>
+</div>
 
        <Footer />
     </>
