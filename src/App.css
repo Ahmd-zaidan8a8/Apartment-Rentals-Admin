@@ -1,3 +1,38 @@
 .li{
     list-style-type: none;
 }
+.sidebar {
+    background-color: #333;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    margin: 0;
+    
+    
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #444; /* Podświetlenie po najechaniu na pole */
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+  }
+
+  .sidebar ul li{
+    font-size: 16px;
+    line-height: 3;
+    margin-left: 10px;
+    
+  }
+
+  .footer{
+   margin-top: 20px;
+  }
+
+ img{
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 15px;
+ }

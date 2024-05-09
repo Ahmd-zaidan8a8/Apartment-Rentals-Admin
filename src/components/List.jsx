@@ -14,11 +14,8 @@ const List = ({ apartementList, onDelete }) => {
       {list}
     </div>
   );
-<<<<<<< HEAD
-=======
   
 
->>>>>>> 55e0c3db9f62a25f2d9e8ea0fcb695cdc30722c5
 };
 
 export default List;

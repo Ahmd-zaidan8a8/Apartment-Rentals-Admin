@@ -23,23 +23,7 @@
         "cleaning_fee": 50,
         "review_scores_rating": 84,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "d5fab639-a9e3-463a-af92-a408f8cc2d5e.jpg",
-          "format": "JPEG",
-          "width": 720,
-          "mimetype": "image/jpeg",
-          "etag": "\"bc12d7f5acdd0dac7a1fe9af77b6b66a5310dec1\"",
-          "id": "9a1168a0abcb0aca0512010b156ac61e",
-          "last_synchronized": "2020-08-04T00:39:36.985953",
-          "color_summary": [
-            "rgba(225, 210, 195, 1.00)",
-            "rgba(211, 189, 164, 1.00)",
-            "rgba(188, 159, 128, 1.00)"
-          ],
-          "height": 480,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/9a1168a0abcb0aca0512010b156ac61e"
-        }
+        "picture": "/src/images/apartment-1.jpeg"
       },
       {
         "id": "1717189",
@@ -63,23 +47,7 @@
         "cleaning_fee": 25,
         "review_scores_rating": 90,
         "cancellation_policy": "moderate",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "34ca06b6_original.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"d434d211cd0197a13dcc8db9e2ce86afa8ee3169\"",
-          "id": "4d8e612798948e8e58e366d4628bbb98",
-          "last_synchronized": "2019-06-03T13:56:01.954410",
-          "color_summary": [
-            "rgba(209, 209, 198, 1.00)",
-            "rgba(201, 192, 185, 1.00)",
-            "rgba(167, 126, 121, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/4d8e612798948e8e58e366d4628bbb98"
-        }
+        "picture": "/src/images/apartment-2.jpeg"
       },
       {
         "id": "1105892",
@@ -103,23 +71,7 @@
         "cleaning_fee": 10,
         "review_scores_rating": 81,
         "cancellation_policy": "flexible",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "64880d3b_original.jpg",
-          "format": "JPEG",
-          "width": 720,
-          "mimetype": "image/jpeg",
-          "etag": "\"1758d106d91b724500562ac2334feeab1cbb2ed9\"",
-          "id": "773e6f55252d9ccc2f0b489829ea2517",
-          "last_synchronized": "2020-08-03T23:40:37.464438",
-          "color_summary": [
-            "rgba(215, 217, 223, 1.00)",
-            "rgba(211, 211, 213, 1.00)",
-            "rgba(207, 206, 207, 1.00)"
-          ],
-          "height": 480,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/773e6f55252d9ccc2f0b489829ea2517"
-        }
+        "picture": "/src/images/apartment-3.jpeg"
       },
       {
         "id": "16972070",
@@ -143,23 +95,7 @@
         "cleaning_fee": 50,
         "review_scores_rating": 80,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "aefb1600-3b69-46a0-8460-5000a77f5e85.jpg",
-          "format": "JPEG",
-          "width": 690,
-          "mimetype": "image/jpeg",
-          "etag": "\"9bb69cca4390a5c37d3fefa09e9abeb0c2299177\"",
-          "id": "2130bb256570f0aad1382b4eb84bad81",
-          "last_synchronized": "2020-08-04T02:40:20.932808",
-          "color_summary": [
-            "rgba(191, 182, 171, 1.00)",
-            "rgba(166, 155, 144, 1.00)",
-            "rgba(141, 113, 85, 1.00)"
-          ],
-          "height": 480,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/2130bb256570f0aad1382b4eb84bad81"
-        }
+        "picture": "/src/images/apartment-4.jpeg"
       },
       {
         "id": "13407381",
@@ -183,23 +119,7 @@
         "cleaning_fee": 40,
         "review_scores_rating": null,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "66d37536-f6d5-4d8b-9a5d-e61cfdfa4a3f.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"3ca732f7bdb8d8af6ba45ae99fe4826c8908d47a\"",
-          "id": "a870da1133e8618f259aaa042288dc51",
-          "last_synchronized": "2019-06-03T16:43:47.331432",
-          "color_summary": [
-            "rgba(155, 124, 28, 1.00)",
-            "rgba(148, 130, 76, 1.00)",
-            "rgba(195, 195, 198, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/a870da1133e8618f259aaa042288dc51"
-        }
+        "picture": "/src/images/apartment-5.jpeg"
       },
       {
         "id": "4714679",
@@ -223,23 +143,7 @@
         "cleaning_fee": 40,
         "review_scores_rating": null,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "afa82d95_original.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"1988ce4144472da586bef9d60185e90d95e34bac\"",
-          "id": "a02573810e21140241df2776be64e67f",
-          "last_synchronized": "2019-06-03T17:08:33.903309",
-          "color_summary": [
-            "rgba(184, 193, 194, 1.00)",
-            "rgba(191, 196, 193, 1.00)",
-            "rgba(160, 125, 95, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/a02573810e21140241df2776be64e67f"
-        }
+        "picture": "/src/images/apartment-6.jpeg"
       },
       {
         "id": "70364",
@@ -263,23 +167,7 @@
         "cleaning_fee": 35,
         "review_scores_rating": 83,
         "cancellation_policy": "moderate",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "c6da2e05_original.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"4c369d152a791ca41a0226027a4f7d2416b252b3\"",
-          "id": "4a4d51c58f6dacda6021a6741d640a16",
-          "last_synchronized": "2019-06-03T14:47:09.894079",
-          "color_summary": [
-            "rgba(221, 195, 177, 1.00)",
-            "rgba(188, 163, 149, 1.00)",
-            "rgba(149, 102, 70, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/4a4d51c58f6dacda6021a6741d640a16"
-        }
+        "picture": "/src/images/apartment-6.jpeg"
       },
       {
         "id": "5451147",
@@ -303,23 +191,7 @@
         "cleaning_fee": 40,
         "review_scores_rating": 94,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "1b22f25c_original.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"79ef2e4ffb9cff9fc4f31e3a8cf4ecf473348bce\"",
-          "id": "39db1dd1898f920f97699d7da6a09ba7",
-          "last_synchronized": "2019-06-03T15:44:58.801943",
-          "color_summary": [
-            "rgba(216, 204, 206, 1.00)",
-            "rgba(161, 99, 89, 1.00)",
-            "rgba(160, 119, 112, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/39db1dd1898f920f97699d7da6a09ba7"
-        }
+        "picture": "/src/images/apartment-7.jpeg"
       },
       {
         "id": "2156319",
@@ -343,23 +215,7 @@
         "cleaning_fee": 40,
         "review_scores_rating": 93,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "77e62dd9_original.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"a5dc9a3fbdaabb2f483186eba052b5bec4fc3073\"",
-          "id": "660be0f5ebe252239ae2d39ee4fd2a08",
-          "last_synchronized": "2019-06-03T15:46:03.647197",
-          "color_summary": [
-            "rgba(194, 168, 140, 1.00)",
-            "rgba(184, 174, 165, 1.00)",
-            "rgba(118, 135, 144, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/660be0f5ebe252239ae2d39ee4fd2a08"
-        }
+        "picture": "/src/images/apartment-8.jpeg"
       },
       {
         "id": "904769",
@@ -383,23 +239,7 @@
         "cleaning_fee": 15,
         "review_scores_rating": 91,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "f49716f0_original.jpg",
-          "format": "JPEG",
-          "width": 720,
-          "mimetype": "image/jpeg",
-          "etag": "\"dcc6937c599951cc32a27c5a5fb0e4e0b689094f\"",
-          "id": "b5c29c61928b29b051791b3db2d03590",
-          "last_synchronized": "2020-08-04T01:32:34.448819",
-          "color_summary": [
-            "rgba(208, 208, 209, 1.00)",
-            "rgba(201, 198, 198, 1.00)",
-            "rgba(129, 112, 102, 1.00)"
-          ],
-          "height": 480,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/b5c29c61928b29b051791b3db2d03590"
-        }
+        "picture": "/src/images/apartment-9.jpeg"
       },
       {
         "id": "2156343",
@@ -423,23 +263,7 @@
         "cleaning_fee": 40,
         "review_scores_rating": 50,
         "cancellation_policy": "strict",
-        "picture_url": {
-          "thumbnail": true,
-          "filename": "3242a596_original.jpg",
-          "format": "JPEG",
-          "width": 639,
-          "mimetype": "image/jpeg",
-          "etag": "\"7d9d10785143651bc98fc9f270195cd9026676b2\"",
-          "id": "710a4d2976c9e5563b98ddc2796c4fa8",
-          "last_synchronized": "2019-06-03T14:07:39.835689",
-          "color_summary": [
-            "rgba(171, 135, 100, 1.00)",
-            "rgba(147, 137, 122, 1.00)",
-            "rgba(169, 139, 106, 1.00)"
-          ],
-          "height": 426,
-          "url": "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/710a4d2976c9e5563b98ddc2796c4fa8"
-        }
+        "picture": "/src/images/apartment-10.jpeg"
       },
       {
         "id": "7703640",

@@ -1,6 +1,8 @@
+
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
+import '../App.css'
 
 function ItemDetails({ apartementList }) {
   const [apartement, setApartement] = useState({});
@@ -59,9 +61,10 @@ function ItemDetails({ apartementList }) {
             </ul>
           )}
         </div>
+
         <div className="col-4">
-          <p>photo placeholder</p>
-        </div>
+    <img src={apartement.picture} alt="Apartment" />
+  </div>
       </div>
 
       <div className="text-center p-3">
