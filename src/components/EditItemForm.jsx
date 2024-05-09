@@ -14,10 +14,12 @@ const EditItemForm = ({ handleEditSubmit }) => {
 
   return (
     <>
+    <div className="border p-4 pb-0">
+    <h4 className="m-1 p-2">Edit apartment</h4>
       <form className="p-4" onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
-            apartement Name
+            Apartment Name
           </label>
           <input
             {...register("name")}
@@ -140,6 +142,7 @@ const EditItemForm = ({ handleEditSubmit }) => {
           Edit Apartment
         </button>
       </form>
+      </div>
       <div className="text-center p-3">
         <Link to="/" className="btn btn-outline-secondary">
           Back to Homepage

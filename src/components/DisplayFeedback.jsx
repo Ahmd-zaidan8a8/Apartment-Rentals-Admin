@@ -22,7 +22,7 @@ const DisplayFeedback = () => {
             <div className="d-flex justify-content-center">
               <div className="spinner-border text-primary" role="status"></div>
             </div>
-            <p>your order being manged</p>
+            <p>Your order is being managed</p>
           </div>
         )}
         {showCongrats && (
@@ -40,7 +40,7 @@ const DisplayFeedback = () => {
               </svg>
               <p>Congratulations!</p>
             </div>
-            <p>Your Apartment has been sucsessfully added .</p>
+            <p>Your Apartment has been sucsessfully added.</p>
             <div className="text-center p-4">
               <Link to="/" className="btn btn-outline-secondary">
                 Back to Homepage
