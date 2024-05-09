@@ -11,6 +11,7 @@ import data from "./data/data.json";
 import { useState } from "react";
 import EditItemForm from "./components/EditItemForm";
 import DisplayFeedback from "./components/DisplayFeedback";
+import Favorites from "./pages/Favorites";
 
 const App = () => {
   const { results } = data;
@@ -25,6 +26,7 @@ const App = () => {
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [favorites, setFavorites] = useState([]);
 
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
@@ -67,6 +69,19 @@ const App = () => {
     setIsFormSubmitted(true);
   };
 
+  // TODO: the component doesn't change immeaditly
+  // at the end of the execution
+
+  const handleAddtoFavorites = (id) => {
+    const favoriteApartment = apartementList.find(
+      (apartement) => apartement.id === id
+    );
+
+    if (!favorites.some((item) => item.id === id))
+      setFavorites([...favorites, favoriteApartment]);
+
+  };
+
   return (
     <>
       <Navbar />
@@ -82,6 +97,7 @@ const App = () => {
                   <HomePage
                     apartementList={apartementList}
                     handleDelete={handleDelete}
+                    handleAddtoFavorites={handleAddtoFavorites}
                   />
                 }
               />
@@ -106,6 +122,7 @@ const App = () => {
                 element={<EditItemForm handleEditSubmit={handleEditSubmit} />}
               />
               <Route path="/feedback" element={<DisplayFeedback />} />
+              <Route path="/favorites" element={<Favorites favorites={favorites} />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
 

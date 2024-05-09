@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ListItem = ({ item, onDelete }) => {
+const ListItem = ({ item, onDelete , handleAddtoFavorites }) => {
   return (
     <div className="card mb-2">
       <Link
@@ -24,9 +24,11 @@ const ListItem = ({ item, onDelete }) => {
           )}
         </small>
       </Link>
-      <div className="d-flex justify-content-start">
-        <Link to={`/edit/${item.id}`} >
-          <button className="btn btn-primary m-1">Edit Item</button></Link>
+      <div className="d-flex justify-content-around">
+        <Link to={`/edit/${item.id}`}>
+          
+          <button className="btn btn-primary m-1">Edit Item</button>
+        </Link>
         <button
           className="btn btn-danger m-1"
           onClick={() => {
@@ -34,6 +36,12 @@ const ListItem = ({ item, onDelete }) => {
           }}
         >
           Delete
+        </button>
+        <button
+          onClick={() => handleAddtoFavorites(item.id)}
+          className="btn btn-info"
+        >
+          Add to Favorites
         </button>
       </div>
     </div>
