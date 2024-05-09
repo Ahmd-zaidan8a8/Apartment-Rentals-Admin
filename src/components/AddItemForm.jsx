@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import { useRef } from "react";
+import DisplayFeedback from "./DisplayFeedback";
+import { useNavigate } from "react-router-dom";
 
-const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
+const AddItemForm = ({ handleChange, handleSubmit, newItem , isFormSubmitted }) => {
   const ref = useRef(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (ref.current) ref.current.focus();
@@ -89,6 +93,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
       <button type="submit" className="btn btn-primary">
         Add Item
       </button>
+      {isFormSubmitted && navigate("/feedback")}
       </form>
     </div>
   );

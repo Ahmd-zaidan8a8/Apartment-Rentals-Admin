@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import data from "./data/data.json";
 import { useState } from "react";
 import EditItemForm from "./components/EditItemForm";
+import DisplayFeedback from "./components/DisplayFeedback";
 
 const App = () => {
   const { results } = data;
@@ -22,6 +23,8 @@ const App = () => {
     price: "",
     review_scores_rating: "",
   });
+
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
@@ -38,11 +41,11 @@ const App = () => {
     });
   };
 
-  // TODO: Feedback
   const handleSubmit = (e) => {
     e.preventDefault();
     const updatedList = [...apartementList, newItem].reverse();
     setApartementList(updatedList);
+    setIsFormSubmitted(true);
     setNewItem({
       name: "",
       city: "",
@@ -61,29 +64,17 @@ const App = () => {
         : apartement;
     });
     setApartementList(newList);
+    setIsFormSubmitted(true);
   };
 
   return (
     <>
-      {/* <Link to="/">HomePage</Link>
-      <Link to="/items/:itemDetail">Details</Link>
-      <Link to="/about">About</Link> */}
-
-      {/* <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-3">
-          </div>
-          <div className="col-md-9">
-
-          </div>
-        </div>
-      </div> */}
       <Navbar />
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 container">{<Sidebar />}</div>
-          <div class="col-md-9">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-3 container">{<Sidebar />}</div>
+          <div className="col-md-9">
             <Routes>
               <Route
                 path="/"
@@ -106,6 +97,7 @@ const App = () => {
                     newItem={newItem}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
+                    isFormSubmitted={isFormSubmitted}
                   />
                 }
               />
@@ -113,13 +105,14 @@ const App = () => {
                 path="/edit/:itemId"
                 element={<EditItemForm handleEditSubmit={handleEditSubmit} />}
               />
+              <Route path="/feedback" element={<DisplayFeedback />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
+
+            <Footer />
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

@@ -9,12 +9,12 @@ const List = ({ apartementList, onDelete }) => {
 
   return (
     <div className="list-group text-left p-2 m-1">
-      <p className="text-left">Manage your venues in one place</p>
+      <h1 className="m-2 mt-4">Your Apartments' list</h1>
+      <p className="text-left m-2 ">Manage your venues in one place </p>
       {list.length === 0 && <p>No items found.</p>}
       {list}
     </div>
   );
-
 };
 
 export default List;
