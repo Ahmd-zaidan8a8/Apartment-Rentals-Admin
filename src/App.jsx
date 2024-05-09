@@ -23,8 +23,6 @@ const App = () => {
     review_scores_rating: "",
   });
 
-  const navigate = useNavigate();
-
   const handleDelete = (id) => {
     const filtered = apartementList.filter(
       (apartement) => apartement.id !== id
@@ -33,19 +31,20 @@ const App = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { id, value } = e.target;
     setNewItem({
       ...newItem,
-      [name]: value,
+      [id]: value,
     });
   };
 
   // TODO: Feedback
   const handleSubmit = (e) => {
+    console.log(apartementList);
     e.preventDefault();
     const updatedList = [...apartementList, newItem].reverse();
+    console.log(updatedList);
     setApartementList(updatedList);
-    navigate('/');
     setNewItem({
       name: "",
       city: "",
@@ -59,15 +58,10 @@ const App = () => {
     const newApartment = data;
 
     const newList = apartementList.map((apartement) => {
-      return apartementId === apartement.id ? {...newApartment , id:apartementId} : apartement;
+      return apartementId === apartement.id
+        ? { ...newApartment, id: apartementId }
+        : apartement;
     });
-
-    // const copy = structuredClone(apartementList);
-    // copy[apartementId] = newApartment;
-
-    console.log(newList)
-
-
     setApartementList(newList);
   };
 

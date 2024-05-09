@@ -7,7 +7,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
   useEffect(() => {
     if (ref.current) ref.current.focus();
   }, []);
-  
+
   return (
     <div className="border p-4 pb-0">
       <h4 className="m-1 p-2">Add a new apartment</h4>
@@ -20,7 +20,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
             ref={ref}
             className="form-control"
             type="text"
-            name="name"
+            id="name"
             value={newItem.name}
             onChange={handleChange}
             placeholder="Enter an apartment name"
@@ -34,7 +34,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
           <input
             className="form-control"
             type="text"
-            name="city"
+            id="city"
             value={newItem.city}
             onChange={handleChange}
             placeholder="Enter city"
@@ -49,7 +49,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
           <input
             className="form-control"
             type="text"
-            name="country"
+            id="country"
             value={newItem.country}
             onChange={handleChange}
             placeholder="Enter country"
@@ -64,7 +64,7 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
           <input
             className="form-control"
             type="number"
-            name="price"
+            id="price"
             value={newItem.price}
             onChange={handleChange}
             placeholder="Enter the price"
@@ -72,26 +72,24 @@ const AddItemForm = ({ handleChange, handleSubmit, newItem }) => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="rating" className="form-label">
+          <label htmlFor="review_scores_rating" className="form-label">
             Rating
           </label>
           <br />
           <input
             className="form-control"
             type="number"
-            name="review_scores_rating"
+            id="review_scores_rating"
             value={newItem["review_scores_rating"]}
             onChange={handleChange}
             placeholder="Enter the rating"
             required
           />
         </div>
-      </form>
       <button type="submit" className="btn btn-primary">
         Add Item
       </button>
-      
-      
+      </form>
     </div>
   );
 };
