@@ -62,23 +62,23 @@ const EditItemForm = ({ handleEditSubmit }) => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="cleaningFee" className="form-label">
+          <label htmlFor="cleaning_fee" className="form-label">
             Cleaning fee
           </label>
           <input
-            {...register("cleaningFee")}
-            id="cleaningFee"
+            {...register("cleaning_fee")}
+            id="cleaning_fee"
             type="number"
             className="form-control"
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="score" className="form-label">
+          <label htmlFor="review_scores_rating" className="form-label">
             Score
           </label>
           <input
-            {...register("score")}
-            id="score"
+            {...register("review_scores_rating")}
+            id="review_scores_rating"
             type="number"
             className="form-control"
           />
@@ -117,12 +117,12 @@ const EditItemForm = ({ handleEditSubmit }) => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="responseTime" className="form-label">
+          <label htmlFor="host_response_time" className="form-label">
             Response time
           </label>
           <input
-            {...register("responseTime")}
-            id="responseTime"
+            {...register("host_response_time")}
+            id="host_response_time"
             type="text"
             className="form-control"
           />
