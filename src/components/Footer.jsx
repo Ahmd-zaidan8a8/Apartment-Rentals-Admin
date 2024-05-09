@@ -1,14 +1,16 @@
-import { DiVim } from "react-icons/di";
-
-
+import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return <footer className="footer fixed-bottom bg-secondary p-1">
-<div className="p-1">Project on GitHub (link to add)
-</div>
-  
-  
-  </footer>
+  return (
+    <footer className="footer fixed-bottom bg-secondary p-1">
+      <div className="text-center">
+        <Link to="https://github.com/Ahmd-zaidan8a8/Apartment-Rentals-Admin.git">
+          <FaGithub size={40} color="black" />
+        </Link>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

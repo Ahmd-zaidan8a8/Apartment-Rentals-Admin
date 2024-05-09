@@ -40,10 +40,8 @@ const App = () => {
 
   // TODO: Feedback
   const handleSubmit = (e) => {
-    console.log(apartementList);
     e.preventDefault();
     const updatedList = [...apartementList, newItem].reverse();
-    console.log(updatedList);
     setApartementList(updatedList);
     setNewItem({
       name: "",
@@ -67,53 +65,61 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-
       {/* <Link to="/">HomePage</Link>
       <Link to="/items/:itemDetail">Details</Link>
       <Link to="/about">About</Link> */}
-      <div className="container-fluid">
-      <div className="row">
-          <div className="col-md-3">
-      <Sidebar />
-      </div>
-      <div className="col-md-9">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <HomePage
-              apartementList={apartementList}
-              handleDelete={handleDelete}
-            />
-          }
-        />
-        <Route
-          path="/items/:itemId"
-          element={<ItemDetails apartementList={apartementList} />}
-        />
-        <Route path="/about" element={<About />} />
-        <Route
-          path="/dashboard"
-          element={
-            <Dashboard
-              newItem={newItem}
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-            />
-          }
-        />
-        <Route
-          path="/edit/:itemId"
-          element={<EditItemForm handleEditSubmit={handleEditSubmit} />}
-        />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
 
-      {/* <Footer /> */}
+      {/* <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-3">
+          </div>
+          <div className="col-md-9">
+
+          </div>
+        </div>
+      </div> */}
+      <Navbar />
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 container">{<Sidebar />}</div>
+          <div class="col-md-9">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <HomePage
+                    apartementList={apartementList}
+                    handleDelete={handleDelete}
+                  />
+                }
+              />
+              <Route
+                path="/items/:itemId"
+                element={<ItemDetails apartementList={apartementList} />}
+              />
+              <Route path="/about" element={<About />} />
+              <Route
+                path="/dashboard"
+                element={
+                  <Dashboard
+                    newItem={newItem}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                  />
+                }
+              />
+              <Route
+                path="/edit/:itemId"
+                element={<EditItemForm handleEditSubmit={handleEditSubmit} />}
+              />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
+
+      <Footer />
     </>
   );
 };
