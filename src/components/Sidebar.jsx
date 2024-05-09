@@ -15,6 +15,9 @@ const Sidebar = () => {
         <li>
           <Link to="/dashboard" className="text-white ">Create a new item</Link>
         </li>
+        <li>
+        <Link to="/favorites" className="text-white ">Go to Favorites</Link>
+        </li>
       </ul>
     </div>
   );
