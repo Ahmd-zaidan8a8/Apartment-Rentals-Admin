@@ -69,23 +69,11 @@ const App = () => {
     <>
       <Navbar />
 
-<<<<<<< HEAD
       {/* <Link to="/about">About</Link> */}
       <Link to="/dashboard">Go to dashboard</Link>
 
       {/* <Sidebar /> */}
 
-=======
-      {/* <Link to="/">HomePage</Link>
-      <Link to="/items/:itemDetail">Details</Link>
-      <Link to="/about">About</Link> */}
-      <div className="container-fluid">
-      <div className="row">
-          <div className="col-md-3">
-      <Sidebar />
-      </div>
-      <div className="col-md-9">
->>>>>>> 55e0c3db9f62a25f2d9e8ea0fcb695cdc30722c5
       <Routes>
         <Route
           path="/"
@@ -117,9 +105,9 @@ const App = () => {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+{/* </div>
 </div>
-</div>
-</div>
+</div> */}
 
       {/* <Footer /> */}
     </>
