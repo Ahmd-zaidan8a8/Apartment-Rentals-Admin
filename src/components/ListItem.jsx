@@ -25,9 +25,10 @@ const ListItem = ({ item, onDelete }) => {
         </small>
       </Link>
       <div className="d-flex justify-content-start">
-        <Link className="m-2" to={`/edit/${item.id}`} ><button className="btn btn-primary">Edit Item</button></Link>
+        <Link to={`/edit/${item.id}`} >
+          <button className="btn btn-primary m-1">Edit Item</button></Link>
         <button
-          className="btn btn-danger"
+          className="btn btn-danger m-1"
           onClick={() => {
             onDelete(item.id);
           }}

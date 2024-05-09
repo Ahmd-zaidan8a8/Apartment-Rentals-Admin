@@ -1,4 +1,5 @@
 import ListItem from "./ListItem";
+import '../App.css'
 
 const List = ({ apartementList, onDelete }) => {
   let list = apartementList.map((apartement) => {

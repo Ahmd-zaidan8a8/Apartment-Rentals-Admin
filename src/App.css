@@ -1,3 +1,4 @@
+
 .li{
     list-style-type: none;
 }
@@ -27,9 +28,7 @@
     
   }
 
-  .footer{
-   margin-top: 20px;
-  }
+  
 
  img{
     max-width: 100%;
@@ -61,4 +60,42 @@
 
 .About{
     text-align: center;
+    padding-bottom: 500px;
+}
+.NotFound{
+  padding-top: 150px;
+  padding-bottom: 200px;
+}
+.NotFound p{
+  font-size: 18px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+.NotFound h1{
+  padding-top: 30px;
+}
+.NotFound img{
+  padding-left: 50px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.border{
+  border-radius: 5px;
+}
+
+
+@media (max-width: 800px){
+  .list-group{
+    max-width: 400px;
+  }
+  .sidebar{
+    width: 150px;
+  }
+.HomePage{
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+
 }

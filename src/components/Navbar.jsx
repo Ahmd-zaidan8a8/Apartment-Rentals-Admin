@@ -11,7 +11,7 @@ const Navbar = () => {
           <a className="navbar-brand" href="#">
             <FaBuildingColumns size={40} />
             <span style={{ display: "inline-block", padding: "1rem" }}>
-              LogoName
+              Magmad RealEstate Solutions
             </span>
           </a>
         </div>
