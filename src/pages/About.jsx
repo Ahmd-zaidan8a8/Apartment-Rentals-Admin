@@ -1,4 +1,8 @@
+import { SiZebpay } from "react-icons/si";
 import { Link } from "react-router-dom";
+import '../App.css'
+
+
 
 
 function About(){
@@ -12,13 +16,21 @@ function About(){
         </div>
         <div className="row">
 
-        <div className="author-1 col">
-            <img src="src/images/ahmad-photo.png" alt="Author1" />
-          <Link to="https://github.com/Ahmd-zaidan8a8">Ahmad Zaidan</Link> 
+        <div className="author col">
+            <img src="src/images/ahmad-photo.png" alt="Author1" className="rounded-circle" />
+            <br />
+            <p>Ahmad Zaidan</p>
+            <Link to="https://www.linkedin.com/in/ahmad-zaidan-03b276245/" style={{textDecoration:'none'}} className="author-link">LinkedIn</Link> 
+            <br />
+          <Link to="https://github.com/Ahmd-zaidan8a8" style={{textDecoration:'none'}} className="author-link">GitHub</Link> 
           </div>
-          <div className="author-2 col">
-
-            <Link to="https://github.com/magdakorgul">Magdalena Korgul</Link>
+          <div className="author col">
+            <img src="src/images/magda-photo.jpeg" alt="Author2" className="rounded-circle" />
+            <br />
+            <p>Magda Korgul</p>
+            <Link to="https://www.linkedin.com/in/magdalena-korgul/" style={{textDecoration:'none'}} className="author-link">LinkedIn</Link>
+            <br />
+            <Link to="https://github.com/magdakorgul" style={{textDecoration:'none'}} className="author-link">GitHub</Link>
             </div>
             </div>
         </div>

@@ -40,3 +40,24 @@
     padding-bottom: 20px;
     
 }
+.author img{
+    max-width: 40%;
+    margin-bottom: 10px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.author-link{
+    color: black;
+    line-height: 2;
+    
+}
+.author p{
+    font-size: 20px;
+}
+
+.About{
+    text-align: center;
+}
