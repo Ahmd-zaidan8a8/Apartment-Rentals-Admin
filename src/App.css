@@ -83,6 +83,9 @@
 .border{
   border-radius: 5px;
 }
+.favorites{
+  padding-top: 50px;
+}
 
 
 @media (max-width: 800px){

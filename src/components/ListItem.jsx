@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../App.css'
 
 const ListItem = ({ item, onDelete, handleAddtoFavorites }) => {
   return (
@@ -16,7 +17,7 @@ const ListItem = ({ item, onDelete, handleAddtoFavorites }) => {
           {`Location:
           ${item.city}, ${item.country}`}
         </p>
-        <p className="mb-1">Price: {item.price}$</p>
+        <p className="mb-1">Price: {item.price}€</p>
         <p className="mb-1">Raiting: {item["review_scores_rating"]}</p>
         <small>
           {item.cancellation_policy === "flexible" && (
@@ -41,7 +42,7 @@ const ListItem = ({ item, onDelete, handleAddtoFavorites }) => {
         </button>
         <button
           onClick={() => handleAddtoFavorites(item.id)}
-          className="btn btn-info"
+          className="btn btn-info m-1"
         >
           Add to Favorites
         </button>
