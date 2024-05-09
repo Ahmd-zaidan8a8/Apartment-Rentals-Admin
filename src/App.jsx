@@ -72,7 +72,7 @@ const App = () => {
       {/* <Link to="/about">About</Link> */}
       <Link to="/dashboard">Go to dashboard</Link>
 
-      {/* <Sidebar /> */}
+      <Sidebar />
 
       <Routes>
         <Route
@@ -105,9 +105,6 @@ const App = () => {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-{/* </div>
-</div>
-</div> */}
 
       {/* <Footer /> */}
     </>
