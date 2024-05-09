@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SidebarMenu from 'react-bootstrap-sidebar-menu';
 import '../App.css'
 
 
@@ -18,7 +17,7 @@ const Sidebar = () => {
         </li>
       </ul>
     </div>
-  )
+  );
 };
 
 

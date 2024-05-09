@@ -3,9 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 
 const EditItemForm = ({ handleEditSubmit }) => {
   const { register, handleSubmit } = useForm();
-  // TODO:
   const navigate = useNavigate();
-  // console.log(navigate)
 
   const { itemId } = useParams();
 

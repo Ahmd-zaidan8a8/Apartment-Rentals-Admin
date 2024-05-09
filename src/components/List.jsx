@@ -14,7 +14,6 @@ const List = ({ apartementList, onDelete }) => {
       {list}
     </div>
   );
-  
 
 };
 
