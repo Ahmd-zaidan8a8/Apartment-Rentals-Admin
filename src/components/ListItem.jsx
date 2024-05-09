@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-const ListItem = ({ item, onDelete , handleAddtoFavorites }) => {
+const ListItem = ({ item, onDelete, handleAddtoFavorites }) => {
   return (
-    <div className="card mb-2">
+    <div className="card mb-4">
       <Link
         to={`/items/${item.id}`}
         className="list-group-item list-group-item-action"
@@ -20,7 +20,9 @@ const ListItem = ({ item, onDelete , handleAddtoFavorites }) => {
         <p className="mb-1">Raiting: {item["review_scores_rating"]}</p>
         <small>
           {item.cancellation_policy === "flexible" && (
-            <p>Cancellation: FLEXIBLE</p>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              FLEXIBLE
+            </span>
           )}
         </small>
       </Link>
