@@ -1,8 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ExpandableText from "../components/ExpandableText";
-import '../App.css'
+import "../App.css";
 
 function ItemDetails({ apartementList }) {
   const [apartement, setApartement] = useState({});
@@ -63,8 +62,12 @@ function ItemDetails({ apartementList }) {
         </div>
 
         <div className="col-4">
-    <img src={apartement.picture} alt="Apartment" />
-  </div>
+          {apartement.picture ? (
+            <img src={apartement.picture} alt="Apartment" />
+          ) : (
+            <img src="/src/images/apartment-1.jpeg" />
+          )}
+        </div>
       </div>
 
       <div className="text-center p-3">
